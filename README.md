@@ -114,6 +114,21 @@ Open the <a href="stores.json">stores.json</a> file and add a new store object t
 <td>value from <code>data_type</code></td>
 <td>The <code>actual value given to the attribute</code> of the html element that corresponds to each product.<br>e.g. <strong>product-listing</strong></td>
 </tr>
+<tr>
+<td align="center"><code>title</code></td>
+<td>type</td>
+<td>The <code>tag</code> of the html element that corresponds to each product title.<br>e.g. <strong>h1</strong></td>
+</tr>
+<tr>
+<td align="center"><code>title</code></td>
+<td>data_type</td>
+<td>The <code>attribute</code> of the html element that corresponds to each product title.<br>e.g. <strong>class</strong></td>
+</tr>
+<tr>
+<td align="center"><code>title</code></td>
+<td>value from <code>data_type</code></td>
+<td>The <code>actual value given to the attribute</code> of the html element that corresponds to each product title.<br>e.g. <strong>product-title</strong></td>
+</tr>
 </tbody>
 </table>
 </summary>
