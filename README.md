@@ -53,3 +53,37 @@ Open the <a href="stores.json">stores.json</a> file and add a new store object t
   }
 }
 ```
+
+<details open="">
+<summary>Expand to see all available options</summary>
+<table>
+<thead>
+<tr>
+<th align="center">Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>name</code></td>
+<td>Name of store you're using, this is just for logging purposes for a good UX.</td>
+</tr>
+<tr>
+<td align="center"><code>url</code></td>
+<td>URL of the store product search, should be a page with a list of all references of that product on.</td>
+</tr>
+<tr>
+<td align="center"><code>method</code></td>
+<td>selenium/request</td>
+</tr>
+<tr>
+<td align="center"><code>card_name</code></td>
+<td>This is used to confirm that you're scraping the right product each time.</td>
+</tr>
+<tr>
+<td align="center"><code>country</code></td>
+<td>Specify a country, stick to a specific format, e.g. us/uk, <code>optional</code> key!</td>
+</tbody>
+</table>
+</details>
+</details>
