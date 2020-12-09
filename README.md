@@ -145,6 +145,11 @@ Open the <a href="stores.json">stores.json</a> file and add a new store object t
 <td>The <code>actual value given to the attribute</code> of the html element that corresponds to each product url.<br>e.g. <strong>product-url</strong></td>
 </tr>
 <tr>
+<td align="center"><code>url</code></td>
+<td>append_base_url</td>
+<td>Appends <code>the start</code> of the url from the site (like https://www.newegg.com) if webscraping the url only gives the part after it. (like /3060-ti-product)<br>e.g. <strong>true</strong></td>
+</tr>
+<tr>
 <td align="center"><code>stock_identifier</code></td>
 <td>type</td>
 <td>The <code>tag</code> of the html element that is reliable of determining if the product is in stock.<br>e.g. <strong>button</strong></td>
