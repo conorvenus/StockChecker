@@ -161,8 +161,8 @@ Open the <a href="stores.json">stores.json</a> file and add a new store object t
 </tr>
 <tr>
 <td align="center"><code>stock_identifier</code></td>
-<td>outfstock</td>
-<td>The <code>method</code> of determining if the product is in stock, if true, the method determines if the product is out of stock, if false, the method determines if the product is in stock.<br>e.g. <strong>true</strong></td>
+<td>outofstock</td>
+<td>The <code>method</code> of determining if the product is out of stock, if true, the method determines if the product is out of stock, if false, the method determines if the product is in stock.<br>e.g. <strong>true</strong></td>
 </tr>
 </tbody>
 </table>
