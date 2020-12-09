@@ -22,11 +22,11 @@ Open the <a href="stores.json">stores.json</a> file and add a new store object t
 
 ```json
 {
-  "name": "",
-  "url": "",
-  "method": "",
-  "card_name": "",
-  "country": "",
+  "name": "e.g. newegg",
+  "url": "https://www.newegg.com/p/pl?d=RTX+3060+Ti",
+  "method": "e.g. selenium",
+  "card_name": "e.g. 3060 ti",
+  "country": "us",
   "webscraping": {
     "product": {
       "type": "",
