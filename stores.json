@@ -1,0 +1,126 @@
+[
+    {
+        "name": "currys",
+        "url": "https://www.currys.co.uk/gbuk/search-keywords/xx_xx_xx_xx_xx/geforce+rtx+3060+ti/xx-criteria.html?awc=1599_1606983443_795e52b8a0a778ba735889f03b0aad81&srcid=369&xtor=AL-1&cmpid=aff~TechRadar~Editorial%20Content~103504~Future+Publishing.",
+        "method": "request",
+        "card_name": "3060 ti",
+        "country": "uk",
+        "webscraping": {
+            "product": {
+                "type": "article",
+                "data_type": "class",
+                "class": "product"
+            },
+            "title": {
+                "type": "span",
+                "data_type": "data-product",
+                "data-product": "name"
+            },
+            "url": {
+                "type": "a",
+                "data_type": "class",
+                "class": "clickableArea",
+                "append_base_url": false
+            },
+            "stock_identifier": {
+                "type": "li",
+                "data_type": "class",
+                "class": "nostock",
+                "outofstock": true
+            }
+        }
+    },
+    {
+        "name": "overclockers",
+        "url": "https://www.overclockers.co.uk/search?sSearch=3060+ti",
+        "method": "request",
+        "card_name":"3060ti",
+        "country": "uk",
+        "webscraping": {
+            "product": {
+                "type": "div",
+                "data_type": "class",
+                "class": "artbox"
+            },
+            "title": {
+                "type": "span",
+                "data_type": "class",
+                "class": "ProductTitle"
+            },
+            "url": {
+                "type": "a",
+                "data_type": "class",
+                "class": "producttitles",
+                "append_base_url": false
+            },
+            "stock_identifier": {
+                "type": "div",
+                "data_type": "id",
+                "id": "comingsoonDetails",
+                "outofstock": true
+            }
+        }
+    },
+    {
+        "name": "ebuyer",
+        "url": "https://www.ebuyer.com/search?q=rtx+3060+ti",
+        "method": "request",
+        "card_name":"3060 ti",
+        "country": "uk",
+        "webscraping": {
+            "product": {
+                "type": "div",
+                "data_type": "class",
+                "class": "grid-item"
+            },
+            "title": {
+                "type": "a",
+                "data_type": "data-event-label",
+                "data-event-label": "Title"
+            },
+            "url": {
+                "type": "a",
+                "data_type": "data-event-label",
+                "data-event-label": "Title",
+                "append_base_url": true
+            },
+            "stock_identifier": {
+                "type": "img",
+                "data_type": "alt",
+                "alt": "Coming Soon",
+                "outofstock": true
+            }
+        }
+    },
+    {
+        "name": "scan",
+        "url": "https://www.scan.co.uk/search?q=rtx+3060+ti",
+        "method": "request",
+        "card_name":"3060 ti",
+        "country": "uk",
+        "webscraping": {
+            "product": {
+                "type": "li",
+                "data_type": "class",
+                "class": "product"
+            },
+            "title": {
+                "type": "span",
+                "data_type": "class",
+                "class": "description"
+            },
+            "url": {
+                "type": "a",
+                "data_type": "class",
+                "class": "",
+                "append_base_url": true
+            },
+            "stock_identifier": {
+                "type": "div",
+                "data_type": "class",
+                "class": "buyButton",
+                "outofstock": false
+            }
+        }
+    }
+]
