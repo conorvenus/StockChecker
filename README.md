@@ -54,7 +54,7 @@ Open the <a href="stores.json">stores.json</a> file and add a new store object t
 }
 ```
 
-<details open="">
+<details>
 <summary>Expand to see all available options</summary>
 <table>
 <thead>
