@@ -102,17 +102,17 @@ Open the <a href="stores.json">stores.json</a> file and add a new store object t
 <tr>
 <td align="center"><code>product</code></td>
 <td>type</td>
-<td>The <code>tag</code> of the html element that corresponds to each product.<br>e.g. div</td>
+<td>The <code>tag</code> of the html element that corresponds to each product.<br>__e.g. div__</td>
 </tr>
 <tr>
 <td align="center"><code>product</code></td>
 <td>data_type</td>
-<td>The <code>attribute</code> of the html element that corresponds to each product.<br>e.g. class</td>
+<td>The <code>attribute</code> of the html element that corresponds to each product.<br>__e.g. class__</td>
 </tr>
 <tr>
 <td align="center"><code>product</code></td>
 <td>value from <code>data_type</code></td>
-<td>The <code>actual value given to the attribute</code> of the html element that corresponds to each product.<br>e.g. product-listing</td>
+<td>The <code>actual value given to the attribute</code> of the html element that corresponds to each product.<br>__e.g. product-listing__</td>
 </tr>
 </tbody>
 </table>
