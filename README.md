@@ -86,9 +86,7 @@ Open the <a href="stores.json">stores.json</a> file and add a new store object t
 </tr>
 <tr>
 <td align="center"><code>headers</code></td>
-<td>headers in the requests headers json format: ```json
-"headers": {"cookie": "", "user-agent": ""}
-```</td>
+<td>headers in the requests headers json format: <code>"headers": {"cookie": "", "user-agent": ""}</code></td>
 </tr>
 </tbody>
 </table>
