@@ -9,6 +9,7 @@ Stock Checker runs on Python 3.X.X:
 ```shell
 git clone https://github.com/conorvenus/StockChecker
 cd StockChecker
+pip install -r requirements.txt
 py main.py
 ```
 
