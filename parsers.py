@@ -10,6 +10,20 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import time
 import random
 
+from colorama import init
+init()
+
+totalSites = 0
+
+
+def setTotalSites():
+    global totalSites
+    totalSites = 0
+
+
+def getTotalSites():
+    return totalSites
+
 
 def getStores(country):
     with open("stores.json") as stores:
@@ -20,8 +34,11 @@ def getStores(country):
 
 def generateBrowserWebdriver():
     options = Options()
+    options.add_argument("disable-blink-features=AutomationControlled")
     options.add_argument('--log-level=3')
-    options.add_argument('headless')
+    # options.add_argument('headless')
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option('useAutomationExtension', False)
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     dc = DesiredCapabilities.CHROME
     dc['loggingPrefs'] = {'driver': 'OFF', 'server': 'OFF', 'browser': 'OFF'}
@@ -29,7 +46,10 @@ def generateBrowserWebdriver():
 
 
 def useRequest(store):
-    gpuRequest = requests.get(store["url"])
+    if "headers" in store:
+        gpuRequest = requests.get(store["url"], headers=store["headers"])
+    else:
+        gpuRequest = requests.get(store["url"])
     if gpuRequest.status_code == 200:
         parser = BeautifulSoup(gpuRequest.content, "lxml")
         webscraping = store["webscraping"]
@@ -41,7 +61,7 @@ def useRequest(store):
             if webscraping["url"]["append_base_url"]:
                 productUrl = "https://" + \
                     store["url"].split("/")[2] + productUrl
-            if store["card_name"] in productTitle.lower():
+            if store["card_name"] in productTitle.lower() and ("card" in productTitle.lower() or "gpu" in productTitle.lower() or "nvidia geforce rtx 3060 ti" in productTitle.lower()):
                 productRequest = requests.get(productUrl)
                 time.sleep(random.randint(0, 2))
                 productParser = BeautifulSoup(productRequest.content, "lxml")
@@ -51,6 +71,8 @@ def useRequest(store):
                 else:
                     printMessage(store["name"].upper(), productTitle, "notfound",
                                  webscraping["stock_identifier"]["outofstock"], productUrl)
+                global totalSites
+                totalSites += 1
     else:
         printStatusCodeError(gpuRequest.status_code)
 
@@ -60,6 +82,7 @@ def useSelenium(store):
     statusCodeError = True
     try:
         chrome.get(store["url"])
+        time.sleep(10)
         gpuRequestContent = chrome.execute_script(
             "return document.body.innerHTML;")
         statusCodeError = False
@@ -73,16 +96,19 @@ def useSelenium(store):
             if webscraping["url"]["append_base_url"]:
                 productUrl = "https://" + \
                     store["url"].split("/")[2] + productUrl
-            if store["card_name"] in productTitle.lower():
-                productRequest = requests.get(productUrl)
-                time.sleep(random.randint(0, 2))
-                productParser = BeautifulSoup(productRequest.content, "lxml")
+            if store["card_name"] in productTitle.lower() and "card" in productTitle.lower():
+                chrome.get(productUrl)
+                productRequestContent = chrome.execute_script(
+                    "return document.body.innerHTML;")
+                productParser = BeautifulSoup(productRequestContent, "lxml")
                 if productParser.find(webscraping["stock_identifier"]["type"], {webscraping["stock_identifier"]["data_type"]: webscraping["stock_identifier"][webscraping["stock_identifier"]["data_type"]]}):
                     printMessage(store["name"].upper(), productTitle, "found",
                                  webscraping["stock_identifier"]["outofstock"], productUrl)
                 else:
                     printMessage(store["name"].upper(), productTitle, "notfound",
                                  webscraping["stock_identifier"]["outofstock"], productUrl)
+                global totalSites
+                totalSites += 1
     except:
         if statusCodeError:
             printStatusCodeError("UNKNOWN")

@@ -83,6 +83,13 @@ Open the <a href="stores.json">stores.json</a> file and add a new store object t
 <tr>
 <td align="center"><code>country</code></td>
 <td>Specify a country, stick to a specific format, e.g. us/uk, <code>optional</code> key!</td>
+</tr>
+<tr>
+<td align="center"><code>headers</code></td>
+<td>headers in the requests headers json format: ```json
+"headers": {"cookie": "", "user-agent": ""}
+```</td>
+</tr>
 </tbody>
 </table>
 </summary>

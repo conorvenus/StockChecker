@@ -1,5 +1,162 @@
 [
     {
+        "name": "box",
+        "url": "https://www.box.co.uk/products/keywords/rtx+3060+ti/ex/true",
+        "headers": {"cookie": "GCLB=CKbmtemvl_65Ag; _fbp=fb.2.1605197236976.1937986772; Mode=retail; ASP.NET_SessionId=qycvwnmpxudn3ittm04butd1; rbzsessionid=f16775d7aaa936a021ff44295415cdf0; rbzid=HKbOzVHDyD0YPW0r4P3rYHCAkMbvZkGKLBn22gdUu6ssunzVrshUf+3e5O8pwipiEO+yrYTmvFXrIy7Zz5vo7LtSw9zQxf1cutn5U1Uynh6LCwMT9NDSG+arJVjFPU+fjgeBuO3bn/q8JtjeHcORsjGWiGiBaWD5qBhnVAklZ6mKbCNllkmuHFuG47WuvC2hfG77sEFq8rzeQfG28lEg+fvGx7tVYqmiJQjZiYHevcqbknHPMCY9ZNRMUHGLYWiD0J57jeMjBQGlE7lwkbOOqarlJ9dRjlosjHg0/HUqWxWsBr3sVXk7KwiK9z3lGCu1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"},
+        "method": "request",
+        "card_name": "3060 ti",
+        "country": "uk",
+        "webscraping": {
+            "product": {
+                "type": "div",
+                "data_type": "class",
+                "class": "p-list"
+            },
+            "title": {
+                "type": "h3",
+                "data_type": "class",
+                "class": ""
+            },
+            "url": {
+                "type": "a",
+                "data_type": "class",
+                "class": "",
+                "append_base_url": false
+            },
+            "stock_identifier": {
+                "type": "div",
+                "data_type": "class",
+                "class": "btn green",
+                "outofstock": false
+            }
+        }
+    },
+    {
+        "name": "ccl online",
+        "url": "https://www.cclonline.com/search/?q=rtx+3060+ti",
+        "headers": {"cookie": "ASP.NET_SessionId=u4qra2gp5zr2gfthizgopve1; basketid=ID=20153310; __tawkuuid=e::cclonline.com::8EJapuR3nmAlGRGuyA3pEg5iazvH9SO+A7TBFb3rhnkDb/O6KNSdAqsOUWAzx0eo::2; __cfduid=d00c25e4cc37887f8fb9555d39e10dda91607626140; cf_clearance=1e2b2768d120b367374c0a0b78b04c5f83f08710-1607629163-0-150; TawkConnectionTime=0", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"},
+        "method": "request",
+        "card_name": "3060 ti",
+        "country": "uk",
+        "webscraping": {
+            "product": {
+                "type": "div",
+                "data_type": "class",
+                "class": "productList"
+            },
+            "title": {
+                "type": "h3",
+                "data_type": "class",
+                "class": ""
+            },
+            "url": {
+                "type": "a",
+                "data_type": "class",
+                "class": "",
+                "append_base_url": true
+            },
+            "stock_identifier": {
+                "type": "a",
+                "data_type": "class",
+                "class": "btnBrightGreen",
+                "outofstock": false
+            }
+        }
+    },
+    {
+        "name": "novatech",
+        "url": "https://www.novatech.co.uk/search.html?search=rtx%203060%20ti",
+        "method": "request",
+        "card_name": "3060 ti",
+        "country": "uk",
+        "webscraping": {
+            "product": {
+                "type": "div",
+                "data_type": "id",
+                "id": "search-result-box"
+            },
+            "title": {
+                "type": "h2",
+                "data_type": "class",
+                "class": ""
+            },
+            "url": {
+                "type": "a",
+                "data_type": "class",
+                "class": "",
+                "append_base_url": true
+            },
+            "stock_identifier": {
+                "type": "div",
+                "data_type": "class",
+                "class": "basket-button",
+                "outofstock": false
+            }
+        }
+    },
+    {
+        "name": "awd-it",
+        "url": "https://www.awd-it.co.uk/?subcats=Y&pcode_from_q=Y&pshort=Y&pfull=Y&pname=Y&pkeywords=Y&search_performed=Y&q=rtx+3060+ti&dispatch=products.search",
+        "method": "request",
+        "card_name": "3060ti",
+        "country": "uk",
+        "webscraping": {
+            "product": {
+                "type": "div",
+                "data_type": "class",
+                "class": "ty-grid-list__item"
+            },
+            "title": {
+                "type": "a",
+                "data_type": "class",
+                "class": "product-title"
+            },
+            "url": {
+                "type": "a",
+                "data_type": "class",
+                "class": "product-title",
+                "append_base_url": false
+            },
+            "stock_identifier": {
+                "type": "span",
+                "data_type": "class",
+                "class": "ty-qty-out-of-stock",
+                "outofstock": true
+            }
+        }
+    },
+    {
+        "name": "aria pc",
+        "url": "https://www.aria.co.uk/Products?search=rtx+3060+ti",
+        "method": "request",
+        "card_name": "3060 ti",
+        "country": "uk",
+        "webscraping": {
+            "product": {
+                "type": "tr",
+                "data_type": "class",
+                "class": "listTableTr"
+            },
+            "title": {
+                "type": "strong",
+                "data_type": "data-product",
+                "data-product": ""
+            },
+            "url": {
+                "type": "a",
+                "data_type": "class",
+                "class": "",
+                "append_base_url": true
+            },
+            "stock_identifier": {
+                "type": "input",
+                "data_type": "id",
+                "id": "addQuantityButton",
+                "outofstock": false
+            }
+        }
+    },
+    {
         "name": "currys",
         "url": "https://www.currys.co.uk/gbuk/search-keywords/xx_xx_xx_xx_xx/geforce+rtx+3060+ti/xx-criteria.html?awc=1599_1606983443_795e52b8a0a778ba735889f03b0aad81&srcid=369&xtor=AL-1&cmpid=aff~TechRadar~Editorial%20Content~103504~Future+Publishing.",
         "method": "request",

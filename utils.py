@@ -35,10 +35,11 @@ def printStatusCodeError(statusCode):
         f"{Fore.LIGHTWHITE_EX}[{datetime.now().strftime('%d/%m/%Y %H:%M:%S')}] {Fore.RED}[⚠️  STATUS CODE {statusCode}]")
 
 
-def printTimeElapsed(timeArray):
+def printTimeElapsed(timeArray, totalSites):
     titleName = "FULL STOCK CHECK COMPLETED"
     print(f"\n{Fore.WHITE}{'-'*len(titleName)}")
-    print(f"{Fore.CYAN}{titleName}")
+    print(
+        f"{Fore.CYAN}{titleName} {Fore.GREEN}[{totalSites} PRODUCTS CHECKED]")
     print(f"{Fore.WHITE}{'-'*len(titleName)}\n")
     print(
         f"{Fore.LIGHTWHITE_EX}[{datetime.now().strftime('%d/%m/%Y %H:%M:%S')}] {Fore.GREEN}[⏱️  Time Elapsed for Full Stock Check: {math.trunc(timeArray[0])} Minutes {math.trunc(timeArray[1])} Seconds]\n")
