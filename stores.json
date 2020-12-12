@@ -34,7 +34,7 @@
     {
         "name": "ccl online",
         "url": "https://www.cclonline.com/search/?q=rtx+3060+ti",
-        "headers": {"cookie": "ASP.NET_SessionId=u4qra2gp5zr2gfthizgopve1; basketid=ID=20153310; __tawkuuid=e::cclonline.com::8EJapuR3nmAlGRGuyA3pEg5iazvH9SO+A7TBFb3rhnkDb/O6KNSdAqsOUWAzx0eo::2; __cfduid=d00c25e4cc37887f8fb9555d39e10dda91607626140; cf_clearance=1e2b2768d120b367374c0a0b78b04c5f83f08710-1607629163-0-150; TawkConnectionTime=0", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"},
+        "headers": {"cookie": "ASP.NET_SessionId=u4qra2gp5zr2gfthizgopve1; basketid=ID=20153310; __tawkuuid=e::cclonline.com::8EJapuR3nmAlGRGuyA3pEg5iazvH9SO+A7TBFb3rhnkDb/O6KNSdAqsOUWAzx0eo::2; __cfduid=d00c25e4cc37887f8fb9555d39e10dda91607626140; cf_chl_1=ce690f7b57cd03f; cf_chl_prog=x19; cf_clearance=36fb6bcd4ea9bdf60c0fb45b5b78acca1f86b989-1607631151-0-150; TawkConnectionTime=0", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"},
         "method": "request",
         "card_name": "3060 ti",
         "country": "uk",

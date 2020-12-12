@@ -6,23 +6,35 @@ import pygame
 import webbrowser
 
 
+productsInStock = []
+
+
 def printMessage(retailer, product_name, status, stock_checking, url):
+    global productsInStock
     if status == "found" and stock_checking:
         print(
             f"{Fore.LIGHTWHITE_EX}[{datetime.now().strftime('%d/%m/%Y %H:%M:%S')}] {Fore.RED}[OUT OF STOCK] {Fore.LIGHTWHITE_EX}--> {Fore.LIGHTYELLOW_EX}[{retailer}] {Fore.LIGHTBLUE_EX}{product_name}")
+        if (retailer, product_name) in productsInStock:
+            productsInStock.remove((retailer, product_name))
     elif status == "found" and not stock_checking:
         print(
             f"{Fore.LIGHTWHITE_EX}[{datetime.now().strftime('%d/%m/%Y %H:%M:%S')}] {Fore.GREEN}[IN STOCK] {Fore.LIGHTWHITE_EX}--> {Fore.LIGHTYELLOW_EX}[{retailer}] {Fore.LIGHTBLUE_EX}{product_name}")
         playInStockSound()
-        webbrowser.open(url)
+        if (retailer, product_name) not in productsInStock:
+            webbrowser.open(url)
+            productsInStock.append((retailer, product_name))
     elif status == "notfound" and stock_checking:
         print(
             f"{Fore.LIGHTWHITE_EX}[{datetime.now().strftime('%d/%m/%Y %H:%M:%S')}] {Fore.GREEN}[IN STOCK] {Fore.LIGHTWHITE_EX}--> {Fore.LIGHTYELLOW_EX}[{retailer}] {Fore.LIGHTBLUE_EX}{product_name}")
         playInStockSound()
-        webbrowser.open(url)
+        if (retailer, product_name) not in productsInStock:
+            webbrowser.open(url)
+            productsInStock.append((retailer, product_name))
     else:
         print(
             f"{Fore.LIGHTWHITE_EX}[{datetime.now().strftime('%d/%m/%Y %H:%M:%S')}] {Fore.RED}[OUT OF STOCK] {Fore.LIGHTWHITE_EX}--> {Fore.LIGHTYELLOW_EX}[{retailer}] {Fore.LIGHTBLUE_EX}{product_name}")
+        if (retailer, product_name) in productsInStock:
+            productsInStock.remove((retailer, product_name))
 
 
 def printCheckingRetailer(retailer):
